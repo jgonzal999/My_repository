@@ -20,7 +20,7 @@ public class OperatorExample {
 		res1=a>b;
 		res2=a<b;
 		res3=a!=b;
-		System.out.println("Result1 "+res1);
+		System.out.println("Result1 "+(a>b));
 		System.out.println("Result2 "+res2);
 		System.out.println("Result3 "+res3);
 		int n=10;
