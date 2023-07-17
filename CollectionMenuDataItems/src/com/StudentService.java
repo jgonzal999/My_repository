@@ -47,6 +47,31 @@ public class StudentService {
 			}
 			
 		}
+		public void getOnlyKeys() {
+			Set<?> ss = stdNames.keySet();//convert map to set
+			Iterator<?> ii = ss.iterator();//creamos iterador
+			while(ii.hasNext()) {
+				Object key = ii.next();
+				System.out.println("Solo Keys: "+stdNames.get(key));
+				System.out.println("Solo Valores: "+key);
+			}
+					
+		}
+		public void searchDataUsingKey(int key) {
+			if (stdNames.containsKey(key)) {
+				System.out.println("Your value: "+stdNames.get(key));
+			}else {
+				System.out.println("NO esta ese valor");
+			}
+		}
+		public void removeData(int key) {
+			if (stdNames.containsKey(key)) {
+				stdNames.remove(key);
+				System.out.println("Borrado");
+			}else {
+				System.out.println("NO esta ese valor");
+			}
+		}
 
 		public void close() {
 			sc.close();
