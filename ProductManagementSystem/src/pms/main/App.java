@@ -1,5 +1,6 @@
 package pms.main;
 
+import java.util.List;
 import java.util.Scanner;
 import pms.bean.Product;
 import pms.service.ProductService;
@@ -33,8 +34,29 @@ public class App {
 				System.out.println(result);
 				break;
 			case 2: System.out.println("Number of products ");
-			System.out.println("Number of products: "+ps.numberOfProduct());
+				System.out.println("Number of products: "+ps.numberOfProduct());
 				break;
+			case 3:System.out.println("Plz enter product id to delete the product");
+		        pid = sc.nextInt();
+		        result = ps.deleteProduct(pid);
+		        System.out.println(result);
+		        break;
+			case 4:System.out.println("Plz enter product id to update price");
+		       pid = sc.nextInt();
+		       System.out.println("Plz enter new price");
+		       price = sc.nextFloat();
+		       Product pp = new Product();
+		       pp.setPid(pid);
+		       pp.setPrice(price);
+		       result = ps.updateProduct(pp);
+		       System.out.println(result);
+		       break;
+			case 5:System.out.println("All Product details");
+		       List<Product> listOfProduct = ps.displayAllProduct();
+		       for(Product product:listOfProduct) {
+		    	   System.out.println(product);  // it will call toString method 
+		       }
+		       break;
 			default:System.out.println("Mala eleccion!!!!!");
 			}
 			System.out.println("Do you to continue? ");
