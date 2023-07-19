@@ -1,5 +1,5 @@
 package prototype;
-class Employee{
+class Employee implements Cloneable{
 	double salary;
 	public void display () {
 		System.out.println("Salario: "+salary);
@@ -24,7 +24,7 @@ public class DemoTest {
 		emp1.salary=12000;
 		emp2.salary=14000;
 		emp3.salary=16000;
-		Employee emp4 = emp2.getClone();
+		Employee emp4 = emp2.getClone();//esto es un clon
 		emp1.display();//16000
 		emp2.display();//14000
 		emp3.display();//16000 //Esto NO es un clon
