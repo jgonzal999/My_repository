@@ -27,6 +27,8 @@ public class DemoTest {
 		//emp.display();
 		Employee e =Employee.getInstance();
 		e.display();
+		//Employee a = new Employee; No podemos hacer esto porque hay un constructor private
+		
 
 	}
 

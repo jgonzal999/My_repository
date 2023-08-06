@@ -24,12 +24,15 @@ public class OneClassMoreThanOneThread {
 		t1.setName("Javi");
 		t2.setName("Maria");
 		t3.setName("Enrique");
+		//System.out.println("creados");
 		t1.setPriority(1);
 		t2.setPriority(6);
 		t3.setPriority(10);
+//		System.out.println("prioridad");
 		t1.start();
 		t2.start();
 		t3.start();
+//		System.out.println("comenzamos");
 		
 
 	}

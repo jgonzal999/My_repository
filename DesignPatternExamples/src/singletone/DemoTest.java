@@ -23,9 +23,10 @@ public class DemoTest {
 		//emp.display();
 		Employee emp1  =Employee.getInstance();
 		emp1.id=10;
+		emp1.display();// si lo pongo aqu si que sale 10
 		Employee emp2  =Employee.getInstance();
 		emp2.id=20;
-		emp1.display();
+		emp1.display();//aqu sale 20 pq es la misma memoria
 		emp2.display();
 		//Employee emp3 = Employee.emp;//para no poder hacer esto y crear otro objeto hayq ue definirlo en Employee como private
 
